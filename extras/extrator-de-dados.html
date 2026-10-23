@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let pedidoBruto = "ITEM: Notebook Gamer | QTD: 1 | PRECO: 3500.00";
+
+        let pedidoFormatado = pedidoBruto.split("|")
+
+        let item = pedidoFormatado[0].slice(6).toUpperCase().trim()
+
+        let qtd = Number(pedidoFormatado[1].slice(5))
+
+        let preco = Number(pedidoFormatado[2].slice(8))
+
+        let precoFinal = qtd * preco
+
+        let frete = true
+
+        if (precoFinal >= 5000 || item === "NOTEBOOK GAMER") {
+            frete = false
+
+            document.write(`O seu total de compras é de R$${precoFinal}</br>`)
+
+            document.write(`Inclui frete? ${frete}`)
+        }
+        else {
+            frete = true
+
+            document.write(`O seu total de compras é de R$${precoFinal}</br>`)
+
+            document.write(`Inclui frete? ${frete}`)
+        }
+    </script>
+</body>
+</html>

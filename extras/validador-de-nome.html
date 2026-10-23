@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nomeEntrada = window.prompt("Digite o nome do usuário")
+
+        nomeEntrada = nomeEntrada.trim().toUpperCase()
+        
+        temSilva = nomeEntrada.split(" ").includes("SILVA")
+
+        document.write(nomeEntrada, "</br>")
+        document.write(`Tem silva? ${temSilva}`)
+    </script>
+</body>
+</html>

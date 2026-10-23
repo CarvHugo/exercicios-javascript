@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cupomDigitado = window.prompt("Digite o cupom para a sua compra").trim().toUpperCase()
+
+        let valorCompra = "150.50"
+
+        document.write(`A sua compra vale ${valorCompra}</br>`)
+        document.write(`O cupom digitado foi ${cupomDigitado}</br>`)
+
+        if (Number(valorCompra) > 100 && cupomDigitado === "DEV10") {
+            valorCompra = valorCompra * 0.9
+
+            document.write(`O novo valor do produto com o desconto do cupom é ${valorCompra}`)
+        }
+        
+        else {
+            document.write(`O produto não pode ser alterado pelo cupom devido aos detalhes promocionais. Consulte os detalhes da promoção no site.`)
+        }
+    </script>
+</body>
+</html>
