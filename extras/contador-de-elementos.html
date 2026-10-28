@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(99, 42, 59);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+
+</head>
+<body>
+    <p>Primeiro parágrafo</p>
+
+    <p>Segundo parágrafo</p>
+
+    <p>Terceiro parágrafo</p>
+
+    <p>Quarto parágrafo</p>
+
+    <script>
+        let paragrafo = window.document.getElementsByTagName('p')
+        
+        let ultimoParagrafo = paragrafo[paragrafo.length - 1]
+
+        ultimoParagrafo.style.color = 'blue'
+    </script>
+
+</body>
+</html>
