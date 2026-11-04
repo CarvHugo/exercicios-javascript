@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" id="barraTarefas" placeholder="Digite uma nova tarefa..."/>
+        <button onclick="adicionaTarefa()" id="botaoAdicionar">Adicionar</button>
+        
+        <div class="filtros">
+            <button data-filter="todas" class="ativas">Todas</button>
+            <button data-filter="pendentes">Pendentes</button>
+            <button data-filter="concluidas">Concluídas</button>
+        </div>
+
+        <ul id="taskList">
+            
+        </ul>
+
+        <div id="dados">
+            <span>Total: <strong id="contagemTotal">0</strong></span> | 
+            <span>Concluídas: <strong id="contagemConcluidas">0</strong></span>
+        </div>
+    </div>
+    
+    <script>
+        let array = []
+
+        function adicionaTarefa() {
+            let tarefa = document.querySelector("#barraTarefas")
+
+            tarefa = tarefa.value.trim()
+
+            array.push(tarefa)
+            
+            console.log(array)
+        }
+    </script>
+
+</body>
+</html>
